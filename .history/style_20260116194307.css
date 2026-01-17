@@ -1,47 +1,64 @@
 :root {
-    --bg-dark: #0a0a0a;         /* Negro más profundo */
-    --bg-card: #141414;         /* Gris casi negro para tarjetas */
-    --primary-color: #ff9f1c;   /* Dorado/Naranja vibrante */
-    --secondary-color: #2ec4b6; /* Un toque de turquesa para contrastes (opcional) */
-    --text-light: #ffffff;      
-    --text-muted: #a0a0a0;     
-    --accent-glow: rgba(255, 159, 28, 0.3);
+    /* Nueva paleta Azul Eléctrico */
+    --bg-dark: #050a18;         
+    --bg-light: #0d1b3e;      
+    --primary-color: #00d2ff;  /* Cian brillante */
+    --accent-color: #3a7bd5;   /* Azul profundo */
+    --text-light: #ffffff;     
+    --text-muted: #b0c4de;     
+    --border-color: rgba(0, 210, 255, 0.2);   
+    --glow: 0 0 15px rgba(0, 210, 255, 0.4);
 }
 
-/* --- Mejoras de Diseño General --- */
-body {
-    background-color: var(--bg-dark);
-    font-family: 'Poppins', sans-serif; /* Te sugiero importar Poppins de Google Fonts */
+/* --- Cambios en Botones para que BRILLEN --- */
+.btn-primary {
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px; /* Bordes más redondeados */
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+    box-shadow: var(--glow); /* Efecto Neón */
 }
 
-/* Tarjetas Pro con bordes redondeados tipo "Nova System" */
-.product-card, .feature-item, .about-card {
-    background-color: var(--bg-card) !important;
-    border-radius: 30px !important; /* Bordes muy redondos como el video */
-    border: 1px solid rgba(255, 255, 255, 0.05);
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.6);
+}
+
+/* --- Mejorando las Tarjetas (Product Cards) --- */
+.product-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 25px; /* Más redondeado como el video */
+    overflow: hidden;
     transition: 0.4s ease;
 }
 
 .product-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary-color);
-    box-shadow: 0 15px 35px var(--accent-glow);
+    box-shadow: var(--glow);
 }
 
-/* Botones Estilo "Pill" */
-.btn-primary, .btn-secondary {
-    border-radius: 50px !important; /* Botones ovalados */
-    letter-spacing: 1px;
-    padding: 14px 30px;
+/* --- Iconos con fondo brillante --- */
+.icon-circle {
+    background: rgba(0, 210, 255, 0.1); /* Fondo azul suave */
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: inset 0 0 10px rgba(0, 210, 255, 0.2);
 }
 
-/* --- Efecto en el Hero --- */
-.hero-section {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=2072&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    border-radius: 0 0 50px 50px; /* Curva al final de la sección */
+/* --- El Header Estilo Flotante --- */
+.header-nav {
+    background-color: rgba(5, 10, 24, 0.8);
+    backdrop-filter: blur(10px); /* Efecto cristal */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 

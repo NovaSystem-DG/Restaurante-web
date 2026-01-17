@@ -1,49 +1,11 @@
 :root {
-    --bg-dark: #0a0a0a;         /* Negro más profundo */
-    --bg-card: #141414;         /* Gris casi negro para tarjetas */
-    --primary-color: #ff9f1c;   /* Dorado/Naranja vibrante */
-    --secondary-color: #2ec4b6; /* Un toque de turquesa para contrastes (opcional) */
-    --text-light: #ffffff;      
-    --text-muted: #a0a0a0;     
-    --accent-glow: rgba(255, 159, 28, 0.3);
+    --bg-dark: #1a1a1a;        
+    --bg-light: #2c2c2c;      
+    --primary-color: #ff5722;  
+    --text-light: #f0f0f0;     
+    --text-muted: #aaaaaa;     
+    --border-color: #444444;   
 }
-
-/* --- Mejoras de Diseño General --- */
-body {
-    background-color: var(--bg-dark);
-    font-family: 'Poppins', sans-serif; /* Te sugiero importar Poppins de Google Fonts */
-}
-
-/* Tarjetas Pro con bordes redondeados tipo "Nova System" */
-.product-card, .feature-item, .about-card {
-    background-color: var(--bg-card) !important;
-    border-radius: 30px !important; /* Bordes muy redondos como el video */
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: 0.4s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-color);
-    box-shadow: 0 15px 35px var(--accent-glow);
-}
-
-/* Botones Estilo "Pill" */
-.btn-primary, .btn-secondary {
-    border-radius: 50px !important; /* Botones ovalados */
-    letter-spacing: 1px;
-    padding: 14px 30px;
-}
-
-/* --- Efecto en el Hero --- */
-.hero-section {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=2072&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    border-radius: 0 0 50px 50px; /* Curva al final de la sección */
-}
-
 
 /* Base y Reset */
 * {
